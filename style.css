@@ -1,0 +1,222 @@
+/* Body and container */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* App Title */
+.app-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* Weather card container */
+.weather-card {
+  display: flex;
+  background: linear-gradient(145deg, #3b3b6d, #4c4c9e);
+  border-radius: 20px;
+  padding: 25px;
+  width: 520px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  flex-wrap: wrap;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 30px;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Left side: icon and main weather info */
+.weather-left {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-left .weather-icon {
+  width: 120px;
+  height: 120px;
+  display: none;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+
+.weather-left .day {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.weather-left .city {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.weather-left .temperature {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.weather-left .description {
+  font-size: 16px;
+  opacity: 0.85;
+  margin: 5px 0;
+  text-transform: capitalize;
+}
+
+/* Right side: detailed weather info */
+.weather-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 25px;
+}
+
+/* Weather details container */
+.weather-details {
+  margin-bottom: 15px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.detail-row .value {
+  font-weight: 700;
+}
+
+/* Forecast Separator */
+.forecast-separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+  backdrop-filter: blur(6px);
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+}
+
+.forecast-icon {
+  width: 40px;
+  height: 40px;
+  margin: 5px 0;
+}
+
+.forecast-temp {
+  font-weight: 600;
+}
+
+/* Change Location button */
+.weather-right > button {
+  padding: 10px 0;
+  background: #2196f3;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.weather-right > button:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Weather main text */
+.weather-right p {
+  margin: 8px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+/* Input Section (same line) */
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.input-section input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.input-section button {
+  padding: 10px 20px;
+  background: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.input-section button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .weather-card {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .weather-right {
+    padding-left: 0;
+    margin-top: 15px;
+  }
+
+  .input-section input, .input-section button {
+    width: 100%;
+  }
+
+  .weather-left .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+}

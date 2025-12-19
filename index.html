@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Page title -->
+  <h1 class="app-title">Weather App</h1>
+
+  <!-- Weather Card -->
+  <div class="weather-card">
+    <!-- Left section: main weather info -->
+    <div class="weather-left">
+      <p class="day" id="day"></p>
+      <p class="city" id="city"></p>
+      <img class="weather-icon" id="weatherIcon" src="" alt="">
+      <p class="temperature" id="temperature"></p>
+      <p class="description" id="description"></p>
+    </div>
+
+    <!-- Right section: detailed weather info -->
+    <div class="weather-right">
+      <div class="weather-details">
+        <div class="detail-row">
+          <span class="label">Precipitation:</span>
+          <span class="value" id="precipitation">0 mm</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Humidity:</span>
+          <span class="value" id="humidity">0%</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Wind:</span>
+          <span class="value" id="wind">0 km/h</span>
+        </div>
+      </div>
+
+      <!-- Forecast Separator -->
+      <div class="forecast-separator">
+        <div class="forecast-day">
+          <span class="forecast-day-name">Mon</span>
+          <img src="https://openweathermap.org/img/wn/01d.png" alt="Sunny" class="forecast-icon">
+          <span class="forecast-temp">--°C</span>
+        </div>
+        <div class="forecast-day">
+          <span class="forecast-day-name">Tue</span>
+          <img src="https://openweathermap.org/img/wn/02d.png" alt="Cloudy" class="forecast-icon">
+          <span class="forecast-temp">--°C</span>
+        </div>
+        <div class="forecast-day">
+          <span class="forecast-day-name">Wed</span>
+          <img src="https://openweathermap.org/img/wn/03d.png" alt="Rainy" class="forecast-icon">
+          <span class="forecast-temp">--°C</span>
+        </div>
+      </div>
+
+      <button onclick="clearInput()">Change Location</button>
+    </div>
+  </div>
+
+  <!-- Input Section (same line) -->
+  <div class="input-section">
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Search</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
